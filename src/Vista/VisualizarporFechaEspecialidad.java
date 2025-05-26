@@ -1,9 +1,8 @@
-
 package Vista;
 
-public class Especialidades extends javax.swing.JInternalFrame {
+public class VisualizarporFechaEspecialidad extends javax.swing.JInternalFrame {
 
-    public Especialidades() {
+    public VisualizarporFechaEspecialidad() {
         initComponents();
     }
 

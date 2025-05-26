@@ -2,7 +2,7 @@
 package Vista;
 
 public class RegistroHistoriaClinica extends javax.swing.JInternalFrame {
-
+  int p;
     public RegistroHistoriaClinica() {
         initComponents();
     }

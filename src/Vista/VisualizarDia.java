@@ -1,9 +1,9 @@
 
 package Vista;
 
-public class VisualizacionAtencion extends javax.swing.JInternalFrame {
+public class VisualizarDia extends javax.swing.JInternalFrame {
 
-    public VisualizacionAtencion() {
+    public VisualizarDia() {
         initComponents();
     }
 

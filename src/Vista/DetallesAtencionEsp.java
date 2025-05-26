@@ -1,12 +1,13 @@
 
 package Vista;
 
-public class Doctor extends javax.swing.JInternalFrame {
+public class DetallesAtencionEsp extends javax.swing.JInternalFrame {
 
-    public Doctor() {
+    public DetallesAtencionEsp() {
         initComponents();
     }
 
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

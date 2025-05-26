@@ -1,12 +1,12 @@
-
 package Vista;
 
-public class Paciente extends javax.swing.JInternalFrame {
+public class GenerarPDF extends javax.swing.JInternalFrame {
 
-    public Paciente() {
+    public GenerarPDF() {
         initComponents();
     }
 
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
