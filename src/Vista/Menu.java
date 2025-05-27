@@ -1,62 +1,47 @@
 
 package Vista;
 import Controlador.*;
+import javax.swing.JDesktopPane;
 public class Menu extends javax.swing.JFrame {
 
     public Menu() {
         initComponents();
-        controladorMenu Controlador = new controladorMenu();
-        setJMenuBar(Controlador.crearMenu());
+          controladorMenu menu = new controladorMenu(this); // Pasar referencia al JFrame
+        setJMenuBar(menu.crearMenu());
+        menu.agregarEventos(); // Agrega los eventos separados del constructor
+
+        setTitle("Sistema de Gestión Médica");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        dspContenedor = new javax.swing.JDesktopPane();
         mbMenu = new javax.swing.JMenuBar();
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1100, 635));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
+        dspContenedor.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1101, Short.MAX_VALUE)
+        javax.swing.GroupLayout dspContenedorLayout = new javax.swing.GroupLayout(dspContenedor);
+        dspContenedor.setLayout(dspContenedorLayout);
+        dspContenedorLayout.setHorizontalGroup(
+            dspContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1100, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 634, Short.MAX_VALUE)
+        dspContenedorLayout.setVerticalGroup(
+            dspContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 630, Short.MAX_VALUE)
         );
 
+        getContentPane().add(dspContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 630));
         setJMenuBar(mbMenu);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -68,11 +53,12 @@ public class Menu extends javax.swing.JFrame {
             }
         });
     }
- 
+ public JDesktopPane getDspContenedor() {
+    return dspContenedor;
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JDesktopPane dspContenedor;
     private javax.swing.JMenuBar mbMenu;
     // End of variables declaration//GEN-END:variables
 }

@@ -17,6 +17,7 @@ public class EspecialidaddeAtencion extends javax.swing.JInternalFrame {
 
         label1.setText("label1");
 
+        setClosable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
