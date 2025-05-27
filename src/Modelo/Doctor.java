@@ -7,5 +7,5 @@ public class Doctor {
   int telefono;
   String correo;
   String fecharegistro;
- String c;
+
 }
