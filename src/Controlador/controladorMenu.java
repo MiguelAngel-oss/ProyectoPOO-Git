@@ -171,7 +171,7 @@ public class controladorMenu {
         
         itemDetallesAtencionEsp.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-        DetallesAtencionEsp ventana = new DetallesAtencionEsp(); // Instancia del formulario
+        MantenimientoHistoriaClinica ventana = new MantenimientoHistoriaClinica(); // Instancia del formulario
         JDesktopPane escritorio = ((Menu) framePrincipal).getDspContenedor(); // Obtener dspContenedor
         escritorio.add(ventana); // Agregar al contenedor
         ventana.toFront(); // Llevar al frente

@@ -1,15 +1,19 @@
 package Modelo;
 
+import java.time.LocalDate;
+
 public class Paciente {
-    int idpaciente;
-    int dni;
-    String nombrepaciente;
-    String apepaciente;
-    String fechanacimiento;
+    int idPaciente;
+    String dni;
+    String nombrePaciente;
+    String apellidosPaciente;
+    LocalDate fechaNacimiento;
     String genero;
-    int telefono;
-    int correo;
+    String telefono;
+    String correo;
     String direccion;
-    String fecharegistro;
+    LocalDate fecharegistro;
+    String tipoSangre;
+    HistoriasClinicas historiaClinica; //se busca historia clinica a travez de dni
     
 }

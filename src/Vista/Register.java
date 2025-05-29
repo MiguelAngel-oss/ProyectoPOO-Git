@@ -34,16 +34,18 @@ public class Register extends javax.swing.JInternalFrame {
 
         jButton1.setText("jButton1");
 
+        setClosable(true);
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setText("jButton2");
+        jButton2.setText("REGISTRARSE");
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 170, 60));
 
-        jTextField1.setText("jTextField1");
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder("Contraseña"));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 210, 60));
 
-        jTextField2.setText("jTextField1");
+        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder("Usuario"));
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 210, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
