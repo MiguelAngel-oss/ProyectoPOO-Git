@@ -14,6 +14,5 @@ public class Paciente {
     String direccion;
     LocalDate fecharegistro;
     String tipoSangre;
-    HistoriasClinicas historiaClinica; //se busca historia clinica a travez de dni
     
 }

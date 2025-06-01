@@ -1,9 +1,9 @@
 
 package Vista;
 
-public class MantenimientoHistoriaClinica extends javax.swing.JInternalFrame {
+public class HistoriaClinica extends javax.swing.JInternalFrame {
 
-    public MantenimientoHistoriaClinica() {
+    public HistoriaClinica() {
         initComponents();
     }
 

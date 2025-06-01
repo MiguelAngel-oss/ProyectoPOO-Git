@@ -5,8 +5,7 @@ import java.time.LocalTime;
 
 public class Atencion {
    int idAtencion;
-   Doctor doctor;                 // COMPOSICIÓN en lugar de int idDoctor
-   Especialidad especialidad;     // COMPOSICIÓN en lugar de int idEspecialidad
+   Doctor doctor;                 // COMPOSICIÓN con doctor y especialidad
    LocalDate fechaAtencion;
    LocalTime horaAtencion;
    String motivoConsulta;

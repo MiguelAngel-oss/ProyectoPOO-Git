@@ -87,7 +87,7 @@ public class RegistroHistoriaClinica extends javax.swing.JInternalFrame {
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
         jPanel3.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 120, -1));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 380, 140));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 470, 140));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Historia Clinica"));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -104,7 +104,7 @@ public class RegistroHistoriaClinica extends javax.swing.JInternalFrame {
         jPanel4.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 140, -1));
         jPanel4.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 140, -1));
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 380, 110));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 470, 110));
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Atencion por Especialidad"));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -138,20 +138,20 @@ public class RegistroHistoriaClinica extends javax.swing.JInternalFrame {
         jPanel5.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 260, -1));
         jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 380, -1));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 380, 280));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 470, 280));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 580));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 580));
 
         jButton3.setText("Visualizar el PDF");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 190, 70));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 190, 70));
 
         jButton4.setText("Registrar Historia Clinica");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 190, 70));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 190, 70));
 
         jButton5.setText("Registrar Atencion");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 190, 70));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 190, 70));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 580));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

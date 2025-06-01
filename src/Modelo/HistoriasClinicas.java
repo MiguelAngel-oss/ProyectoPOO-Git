@@ -9,6 +9,7 @@ public class HistoriasClinicas {
    int numeroHistoria;
    LocalDate fechaCreacion;
    String observaciones;
+   Paciente paciente;
    ArrayList<Atencion> listaA;
    
    public HistoriasClinicas(){

@@ -11,14 +11,10 @@ public class controladorMenu {
     // Atributos públicos o con getters
     public JMenuItem itemgestionarUsuario;
     public JMenuItem itemAñadirPaciente;
-    public JMenuItem itemmantenimientoPaciente;
     public JMenuItem itemAñadirDoctor;
-    public JMenuItem itemmantenimientoDoctor;
     public JMenuItem itemEspecialidadAtencion;
-    public JMenuItem itemMantenimientoEspecialidad;
     public JMenuItem itemRegistroHistoriaClinica;
     public JMenuItem itemDetallesAtencionEsp;
-    public JMenuItem itemgenerarPDF;
     public JMenuItem itemVisualizarDia;
     public JMenuItem itemVisualizarporFechaEsp;
 
@@ -43,35 +39,27 @@ public class controladorMenu {
         JMenu Paciente = new JMenu("Paciente");
         Paciente.setFont(fuenteGrande);
         itemAñadirPaciente = new JMenuItem("Añadir Paciente");
-        itemmantenimientoPaciente = new JMenuItem("Mantenimiento Paciente");
         Paciente.add(itemAñadirPaciente);
-        Paciente.add(itemmantenimientoPaciente);
 
         // --- Menú Doctor
         JMenu Doctor = new JMenu("Doctor");
         Doctor.setFont(fuenteGrande);
         itemAñadirDoctor = new JMenuItem("Añadir Doctor");
-        itemmantenimientoDoctor = new JMenuItem("Mantenimiento Doctor");
         Doctor.add(itemAñadirDoctor);
-        Doctor.add(itemmantenimientoDoctor);
 
         // --- Menú Especialidades
         JMenu Especialidades = new JMenu("Especialidades");
         Especialidades.setFont(fuenteGrande);
         itemEspecialidadAtencion = new JMenuItem("Especialidad Atencion");
-        itemMantenimientoEspecialidad = new JMenuItem("Mantenimiento Especialidad");
         Especialidades.add(itemEspecialidadAtencion);
-        Especialidades.add(itemMantenimientoEspecialidad);
 
         // --- Menú Historia Clínica
         JMenu HistoriaClinica = new JMenu("Historia Clinica");
         HistoriaClinica.setFont(fuenteGrande);
         itemRegistroHistoriaClinica = new JMenuItem("Registrar Historia Clinica");
         itemDetallesAtencionEsp = new JMenuItem("Detalles Atencion Esp");
-        itemgenerarPDF = new JMenuItem("Generar PDF");
         HistoriaClinica.add(itemRegistroHistoriaClinica);
         HistoriaClinica.add(itemDetallesAtencionEsp);
-        HistoriaClinica.add(itemgenerarPDF);
 
         // --- Menú Atención
         JMenu Atencion = new JMenu("Atencion");
@@ -109,15 +97,6 @@ public class controladorMenu {
             }
         });
 
-        itemmantenimientoPaciente.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent e) {
-        MantenimientoPaciente ventana = new MantenimientoPaciente(); // Instancia del formulario
-        JDesktopPane escritorio = ((Menu) framePrincipal).getDspContenedor(); // Obtener dspContenedor
-        escritorio.add(ventana); // Agregar al contenedor
-        ventana.toFront(); // Llevar al frente
-        ventana.setVisible(true);
-            }
-        });
 
         itemAñadirDoctor.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
@@ -129,15 +108,6 @@ public class controladorMenu {
             }
         });
 
-        itemmantenimientoDoctor.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent e) {
-        MantenimientoDoctor ventana = new MantenimientoDoctor(); // Instancia del formulario
-        JDesktopPane escritorio = ((Menu) framePrincipal).getDspContenedor(); // Obtener dspContenedor
-        escritorio.add(ventana); // Agregar al contenedor
-        ventana.toFront(); // Llevar al frente
-        ventana.setVisible(true);
-            }
-        });
         
         itemEspecialidadAtencion.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
@@ -149,15 +119,6 @@ public class controladorMenu {
             }
         });
          
-        itemMantenimientoEspecialidad.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent e) {
-        MantenimientoEspecialidad ventana = new MantenimientoEspecialidad(); // Instancia del formulario
-        JDesktopPane escritorio = ((Menu) framePrincipal).getDspContenedor(); // Obtener dspContenedor
-        escritorio.add(ventana); // Agregar al contenedor
-        ventana.toFront(); // Llevar al frente
-        ventana.setVisible(true);
-            }
-        });
         
         itemRegistroHistoriaClinica.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
@@ -171,7 +132,7 @@ public class controladorMenu {
         
         itemDetallesAtencionEsp.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-        MantenimientoHistoriaClinica ventana = new MantenimientoHistoriaClinica(); // Instancia del formulario
+        HistoriaClinica ventana = new HistoriaClinica(); // Instancia del formulario
         JDesktopPane escritorio = ((Menu) framePrincipal).getDspContenedor(); // Obtener dspContenedor
         escritorio.add(ventana); // Agregar al contenedor
         ventana.toFront(); // Llevar al frente
@@ -179,15 +140,6 @@ public class controladorMenu {
             }
         });
         
-        itemgenerarPDF.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent e) {
-        GenerarPDF ventana = new GenerarPDF(); // Instancia del formulario
-        JDesktopPane escritorio = ((Menu) framePrincipal).getDspContenedor(); // Obtener dspContenedor
-        escritorio.add(ventana); // Agregar al contenedor
-        ventana.toFront(); // Llevar al frente
-        ventana.setVisible(true);
-            }
-        });
         
         itemVisualizarDia.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
@@ -209,4 +161,5 @@ public class controladorMenu {
             }
         });
     }
+    
 }

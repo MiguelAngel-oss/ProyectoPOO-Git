@@ -6,11 +6,12 @@ public class Menu extends javax.swing.JFrame {
 
     public Menu() {
         initComponents();
-          controladorMenu menu = new controladorMenu(this); // Pasar referencia al JFrame
+        controladorMenu menu = new controladorMenu(this); // Pasar referencia al JFrame
         setJMenuBar(menu.crearMenu());
         menu.agregarEventos(); // Agrega los eventos separados del constructor
 
         setTitle("Sistema de Gestión Médica");
+        
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -37,10 +38,10 @@ public class Menu extends javax.swing.JFrame {
         );
         dspContenedorLayout.setVerticalGroup(
             dspContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGap(0, 640, Short.MAX_VALUE)
         );
 
-        getContentPane().add(dspContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 630));
+        getContentPane().add(dspContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 640));
         setJMenuBar(mbMenu);
 
         pack();
@@ -58,7 +59,7 @@ public class Menu extends javax.swing.JFrame {
 }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane dspContenedor;
+    public javax.swing.JDesktopPane dspContenedor;
     private javax.swing.JMenuBar mbMenu;
     // End of variables declaration//GEN-END:variables
 }
