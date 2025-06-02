@@ -54,7 +54,7 @@ public class ControladorMenu implements ActionListener {
         }
     }
 
-    // Método que asegura que solo se muestre un formulario a la vez.
+    // Método que asegura que solo se muestre un formulario a la vez...
     private void mostrarUnicoFormulario(JInternalFrame ventana) {
         cerrarFormularios(); // Cierra los formularios existentes
         vista.dspContenedor.add(ventana);
