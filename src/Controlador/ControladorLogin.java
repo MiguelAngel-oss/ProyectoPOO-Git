@@ -1,36 +1,49 @@
 package Controlador;
 
+import DAO.DAOusuarios;
+import DTO.UsuarioDTO;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import Modelo.*;
 import Vista.*;
 import Formatos.*;
-import Persistencia.*;
-import java.sql.*;
-import javax.swing.JOptionPane;
+import Procesos.ProcesosFrmLogin;
 
 public class ControladorLogin implements ActionListener {
+    
+    public static FormularioMenu fm;
+    public static ControladorMenu controlfm;
+    
+    FrmLogin vista;
+    DAOusuarios dao;
+    UsuarioDTO  usu;
+    
+    public ControladorLogin(FrmLogin fl){
+        vista=fl;
+        vista.btnIniciarSesion.addActionListener(this);
+        ProcesosFrmLogin.Presentacion(fl);
+        ProcesosFrmLogin.LimpiarEntradas(fl); 
+        dao = new DAOusuarios();
+    }
+    
 
     @Override
     public void actionPerformed(ActionEvent e) {
+      if (e.getSource() == vista.btnIniciarSesion) {
+        String user = vista.txtUsuario.getText().trim();
+        String pass = vista.txtContraseña.getText().trim();
+            usu= dao.verificarLogin(user,pass);
+
+            if (usu != null) {
+                Mensajes.M1("Bienvenido " + usu.getNombres());
+                vista.dispose(); // cerrar login
+                //Abrimoos el Formulario Menu con su rpesentacion y metodos correspondientes
+                fm = new FormularioMenu();
+        controlfm = new ControladorMenu(fm);
+            } else {
+                Mensajes.M1("Usuario o contraseña incorrectos");
+                ProcesosFrmLogin.LimpiarEntradas(vista); // Limpia para volver a intentar
+            }
+        }
     }
 
-    public boolean loginUser(Usuario us) {
-        boolean respuesta = false;
-        Connection cn = Conexion.conectar();
-        String sql = "select usuario, contraseña from USUARIO where USUARIO = '" + us.getNombreUsuario() + "'and contraseña = '" + us.getContraseña() + "'";
-        Statement st;
-        try {
-            st = cn.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            while (rs.next()) {
-                respuesta = true;
-            }
-        } catch (SQLException e) {
-            System.out.println("Error al iniciar sesion");
-            JOptionPane.showMessageDialog(null, "Error al iniciar sesion");
-        }
-        return respuesta;
-    }
 }

@@ -6,14 +6,10 @@ import Controlador.ControladorMenu;
 import Modelo.Usuario;
 import javax.swing.JOptionPane;
 
-public class Login extends javax.swing.JFrame {
+public class FrmLogin extends javax.swing.JFrame {
 
-    public Login() {
+    public FrmLogin() {
         initComponents();
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
-        this.setTitle("Aplicativo Posta");
-        
     }
 
    
@@ -79,20 +75,20 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
-    this.Login();
+
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     public static void main(String args[]) {
    
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                new FrmLogin().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnIniciarSesion;
+    public javax.swing.JButton btnIniciarSesion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -100,31 +96,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtContraseña;
-    private javax.swing.JTextField txtUsuario;
+    public javax.swing.JTextField txtContraseña;
+    public javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
-    
-    private void Login(){
-    if(!txtUsuario.getText().isEmpty()&& !txtContraseña.getText().isEmpty()){
-       ControladorLogin controlusuario = new ControladorLogin ();
-       Usuario usuario  = new Usuario();
-       
-       usuario.setNombreUsuario(txtUsuario.getText().trim());
-       usuario.setContraseña(txtContraseña.getText().trim());
-       
-       if(controlusuario.loginUser(usuario)){
-       Menu menu= new Menu();
-       menu.setVisible(true);
-       this.dispose();
-       }else{
-           JOptionPane.showMessageDialog(null, "Usuario y clave incorrectos");
-       }
-       
-       
-    }else{
-        JOptionPane.showMessageDialog(null, "Ingrese sus credenciales");
-    }
-}
+
 
 
 }
